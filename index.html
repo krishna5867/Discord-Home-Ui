@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <!-- <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>Discord | Your Place to Talk and Hang Out</title>
   </head>
   <link rel="stylesheet" href="style.css">
@@ -60,8 +60,8 @@
             <div class="opacity-0 nav-open bg-white text-black  absolute top-0 right-0 h-[102vh] w-1/2 z-40 rounded-l-xl transition-all duration-300">
               <ul class="p-5">
                 <li>
-            <i class="fa-brands fa-discord text-2xl mx-2"></i><span class=" text-2xl">Discord</span>
-            <span><i class="fa-solid fa-xmark text-2xl ml-12"></i></span>
+            <i class="fa-brands fa-discord text-2xl mx-2"></i><span class="text-2xl">Discord</span>
+            <span><i class="fa-solid fa-xmark text-2xl ml-12 hover:cursor-pointer"></i></span>
                 </li>
                 <li class="mt-10 mx-4 text-blue hover:underline cursor-pointer">Home</li>
                 <li class="mt-5 mx-4 hover:underline cursor-pointer">Download</li>
@@ -73,7 +73,6 @@
                 <li class="mt-5 mx-4 hover:underline cursor-pointer">Careers</li>
               </ul>
               <button class="bg-blue text-white rounded-full mt-16 ml-2 px-5 py-3 hover:text-blue shadow-2xl">
-                <i class="fa-sharp fa-solid fa-arrow-down"></i>
                 <i class="fa-solid fa-arrow-down-to-bracket"></i>
                 Download for Windows</button>
             </div>
@@ -84,9 +83,7 @@
               Login
             </button>
           </div>
-          <div class="lg:hiddens">
-            <i class="fa-solid fa-bars text-white text-3xl ml-4 hover:cursor-pointer"></i>
-          </div>
+            <i id="btnn" class="lg:hidden fa-solid fa-bars text-white text-3xl ml-4 hover:cursor-pointer"></i>
         </div>
       </header>
       <!-- Hero Text -->
@@ -288,15 +285,15 @@
     </div>
 </footer>
 <script>
-  let btn = document.getElementById("btn");
-  let bars = document.getElementsByClassName("nav-open")[0];
+  let  bar = document.getElementsByTagName(".fa-bars");
+  // let  bar = document.getElementById("btnn");
+  let open = document.getElementsByClassName("nav-open")[0];
   let xmark = document.getElementsByClassName("fa-xmark")[0];
-
-            btn.onclick = function(){
-              bars.classList.add("active");
+            bar.onclick = function(){
+              open.classList.add("active");
             }
             xmark.onclick = function(){
-              bars.classList.remove("active");
+              open.classList.remove("active");
             }
 </script>
   </body>
