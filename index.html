@@ -31,18 +31,22 @@
         },
       },
     };
-  </script>
+  </script> 
+  <!-- <i class="fa-solid fa-angle-right"></i> -->
+  <!-- <i class="fa-light fa-arrow-down-to-bracket"></i> -->
+                      <!-- <i class="fa-sharp fa-regular fa-arrow-down-to-bracket"></i> -->
+                      <!-- <i class="fa-solid fa-arrow-down-to-bracket"></i> -->
   <body>
     <div class="bg-blue relative overflow-hidden">
       <!-- Header -->
-      <header class="flex justify-between lg:px-12 lg:pt-6 p-6">
-        <div class="">
+      <header class="flex justify-between lg:px-8 lg:pt-6 p-6">
+        <div>
           <h3 class="text-white text-2xl font-bold">
             <i class="fa-brands fa-discord text-2xl mx-2"></i>Discord
           </h3>
         </div>
-        <!-- Links -->
-        <div class="font-semibold">
+        <!-- Menu Links -->
+        <div class="font-semibold lg:pt-2">
           <ul class="lg:flex md:flex hidden">
             <li class="mx-6 text-white hover:underline cursor-pointer">Download</li>
             <li class="mx-6 text-white hover:underline cursor-pointer">Nitro</li>
@@ -53,7 +57,7 @@
             <li class="mx-6 text-white hover:underline cursor-pointer">Careers</li>
           </ul>
           <!-- Hamberger -->
-            <div class="opacity-0 bg-white text-black  absolute top-0 right-0 h-[102vh] w-1/2 z-40 rounded-l-xl transition-all duration-300">
+            <div class="opacity-0 nav-open bg-white text-black  absolute top-0 right-0 h-[102vh] w-1/2 z-40 rounded-l-xl transition-all duration-300">
               <ul class="p-5">
                 <li>
             <i class="fa-brands fa-discord text-2xl mx-2"></i><span class=" text-2xl">Discord</span>
@@ -80,24 +84,21 @@
               Login
             </button>
           </div>
-          <div class="lg:hidden"><i class="fa-solid fa-bars text-white text-3xl ml-4 hover:cursor-pointer"></i></div>
+          <div class="lg:hiddens">
+            <i class="fa-solid fa-bars text-white text-3xl ml-4 hover:cursor-pointer"></i>
+          </div>
         </div>
       </header>
       <!-- Hero Text -->
       <section class="lg:h-[87vh] h-[112vh]">
         <div class="lg:text-center lg:py-28 py-8">
-          <!-- <div class="lg:w-2/3 mx-auto"> -->
               <div class="lg:text-center text-left relative z-10 w-full lg:p-0 p-5">
-                <h2 class="text-gray-900 font-bold mb-2 lg:text-6xl md:text-3xl text-2xl text-white fontFamily-[Noto]">IMAGINE A PLACE...</h2>
-                <!-- inherit -->
-                <p class="text-white lg:mt-6 lg:py-2 py-2 lg:text-xl texl-md lg:mx-52">...where you can belong to a school club, a gaming group, or a worldwide art community. Where just you and a handful of friends can spend time together. A place that makes it easy to talk every day and hang out more often.</p>
+                <h2 class="herotxt font-black mb-2 lg:text-6xl text-3xl text-white">IMAGINE A PLACE...</h2>
+                <p class="text-white lg:mt-6 lg:py-2 py-2 lg:text-xl lg:mx-52">...where you can belong to a school club, a gaming group, or a worldwide art community. Where just you and a handful of friends can spend time together. A place that makes it easy to talk every day and hang out more often.</p>
                 <!-- Hero Button -->
-                <div class="lg:flex justify-center text-left">
-                    <button class="bg-white rounded-full mx-4 px-4 py-3 mt-8 text-2xl hover:text-blue shadow-2xl">
-                      <i class="fa-sharp fa-solid fa-arrow-down"></i>
-                      <i class="fa-regular fa-arrow"></i>
-                      <i class="fa-solid fa-arrow-down-to-bracket"></i>
-                      Download for Windows</button>
+                <div id="btn" class="lg:flex justify-center text-left">
+                  <button class="bg-white rounded-full mx-4 px-4 py-3 mt-8 text-2xl hover:text-blue">
+                  Download for Windows</button>
                     <button class="bg-black text-white mx-4 rounded-full py-3 px-4 mt-8 text-2xl hover:bg-fblack"><i class="fa-light fa-arrow text-white"></i>Open Discord in your browser</button>
                 </div>
               </div>
@@ -150,7 +151,7 @@
 <!-- Just Chilling Section -->
 <section class="bg-gray lg:pt-28 lg:pb-28 pt-10 pb-16">
     <div class="lg:p-0 px-8">
-      <h1 class="lg:text-5xl text-3xl font-bold lg:text-center">RELIABLE TECH FOR STAYING CLOSE</h1>
+      <h1 class="lg:text-5xl text-3xl font-black lg:text-center">RELIABLE TECH FOR STAYING CLOSE</h1>
       <p class="lg:text-xl lg:px-32 lg:text-center lg:mt-8 mt-4">Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</p>
   </div>
   <!-- Img -->
@@ -286,8 +287,18 @@
   </div>
     </div>
 </footer>
+<script>
+  let btn = document.getElementById("btn");
+  let bars = document.getElementsByClassName("nav-open")[0];
+  let xmark = document.getElementsByClassName("fa-xmark")[0];
 
-
+            btn.onclick = function(){
+              bars.classList.add("active");
+            }
+            xmark.onclick = function(){
+              bars.classList.remove("active");
+            }
+</script>
   </body>
 </html>
 
