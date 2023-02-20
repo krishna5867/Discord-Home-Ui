@@ -1,7 +1,9 @@
 # Discord Clone  
-### Developed Discord Home Page using TailwindCss.
-#### Tech Stack- HTML, CSS JavaScript and TailwindCss.
 
+#### Developed Discord user interface (Home Page) using TailwindCss.
+#### Learning - Refresh use of tailwind classes, flex-box etc.
+#### Tech Stack- HTML, CSS JavaScript and TailwindCss.
+#### Time Taken- Around a day.
 
 ### [Deployed](https://discord-home-ui.vercel.app/)
 
@@ -17,3 +19,9 @@
 ![Mobile View](https://github.com/krishna5867/Discord-Home-Ui/blob/main/screenshots/section5.png)
 ![Mobile View](https://github.com/krishna5867/Discord-Home-Ui/blob/main/screenshots/section6.png)
 ![Mobile View](https://github.com/krishna5867/Discord-Home-Ui/blob/main/screenshots/footer.png)
+
+
+
+
+Note:- For mobile screen fa-bar not recognising onclick right now due to some bug so added click event in hero section 1st button to open menu for mobile device.
+I will surely fix this later on . 
